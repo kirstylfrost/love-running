@@ -52,3 +52,32 @@ h1, h2 {
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
+/* hero image (hero outer creates the illusion of zooming*/
+
+#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background-image: url('../images/hero-image.webp');
+
+    /* animates zoom effect on loading page*/
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* Creates level of zoom for hero image*/
+@keyframes hero-zoom {
+    from{
+        transform: (1);
+    }
+    to{
+        transform: (1.1);
+    }
+}
